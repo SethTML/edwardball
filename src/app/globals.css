@@ -2,20 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+    :root {
+        --background: 0 0% 0%;
+        --foreground: 180 100% 50%;
+
+        --card: 0 0% 0%;
+        --card-foreground: 180 100% 50%;
+
+        --popover: 0 0% 0%;
+        --popover-foreground: 180 100% 50%;
+
+        --primary: 180 100% 50%;
+        --primary-foreground: 0 0% 0%;
+
+        --secondary: 300 100% 50%;
+        --secondary-foreground: 0 0% 0%;
+
+        --muted: 180 5% 20%;
+        --muted-foreground: 180 5% 80%;
+
+        --accent: 300 100% 50%;
+        --accent-foreground: 0 0% 0%;
+
+        --destructive: 0 100% 50%;
+        --destructive-foreground: 0 0% 0%;
+
+        --border: 180 100% 50%;
+        --input: 180 100% 50%;
+        --ring: 180 100% 50%;
+
+        --radius: 0.5rem;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Cyberpunk effects */
+.cyberpunk-glow {
+    text-shadow: 0 0 10px currentColor;
+}
+
+.cyberpunk-border {
+    box-shadow: 0 0 10px var(--primary);
+}
+
+/* Custom animations */
+@keyframes glow {
+    0%,
+    100% {
+        text-shadow: 0 0 20px currentColor;
+    }
+    50% {
+        text-shadow: 0 0 10px currentColor;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+    animation: gradient 3s linear infinite;
+    background-size: 200% 200%;
 }
