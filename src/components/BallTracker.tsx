@@ -112,6 +112,8 @@ const CyberpunkBallTracker = () => {
   const [successes, setSuccesses] = useState<number>(0);
   const [mounted, setMounted] = useState<boolean>(false);
 
+  console.log(confidence);
+
   useEffect(() => {
     setMounted(true);
     const ws = new WebSocket("ws://localhost:8765");
