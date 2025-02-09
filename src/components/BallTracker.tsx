@@ -115,7 +115,7 @@ const CyberpunkBallTracker = () => {
   console.log(confidence);
 
   useEffect(() => {
-    alert("~ SethTML: everything deployed on this site was directly pulled from edward's original github repository. I just deployed it onto a website. https://github.com/edwardwc/balltrackerfrontend");
+    alert("~ SethTML: everything deployed on this site was directly pulled from edward's original github repository. I just deployed it onto a website. https://github.com/edwardwc/balltrackerfrontend. My clone can be viewed at https://github.com/SethTML/edwardball. ✌🏻");
   }, []);
 
   useEffect(() => {
