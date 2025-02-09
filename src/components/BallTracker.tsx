@@ -115,6 +115,10 @@ const CyberpunkBallTracker = () => {
   console.log(confidence);
 
   useEffect(() => {
+    alert("~ SethTML: everything deployed on this site was directly pulled from edward's original github repository. I just deployed it onto a website. https://github.com/edwardwc/balltrackerfrontend");
+  }, []);
+
+  useEffect(() => {
     setMounted(true);
     const ws = new WebSocket("ws://localhost:8765");
 
